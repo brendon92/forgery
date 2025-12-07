@@ -1,34 +1,24 @@
-# LangGraph MCP Node & SAMULE Reflection-Synthesis Pipeline  
+# FORGERY: Scalable, Self-Improving Executive AI Agent
+
 **Codename:** FORGERY
-**Author:** https://github.com/brendon92  
 
-## Project Overview  
-This project provides a production-ready foundation for integrating a LangGraph node with an MCP server, full observability through Langfuse/LangSmith, and an automated SAMULE reflection-synthesis pipeline. The goal is to enable reliable agentic workflows, continuous self-improvement, and structured failure-driven fine-tuning (SFT) data generation.  
-All components are optimized for LLM-Agent navigation, deterministic structure, and maintainable extension.
+## Project Goal
+To build a highly scalable, autonomous agent system capable of handling complex, executive-level tasks. The system prioritizes **determinism, deep contextual memory, and cost control** over purely exploratory models.
 
-## Planned Features  
-- **LangGraph Node Architecture**
-  - MCP client with standardized request/response schema  
-  - Trace + span instrumentation (Langfuse or LangSmith)  
-  - Robust error-boundary patterns & retry semantics  
-  - Deterministic I/O shims for agent-safe parsing  
+## Core Architecture
+- **Orchestration:** **LangGraph** for deterministic flow control, resilience, and human-in-the-loop checkpointing.
+- **Memory:** **GraphRAG** (Neo4j + Vector DB) for complex, multi-hop reasoning and persistent contextual awareness.
+- **Scalability:** **RAG-on-Tools** (LlamaIndex) for efficient tool selection and context optimization.
+- **Observability:** **Langfuse/LangSmith** for distributed tracing and FinOps monitoring.
 
-- **MCP Integration Layer**
-  - Typed contract for tool invocation  
-  - Node-safe execution primitives  
-  - Structured streaming support  
-  - Failure-mode tagging for downstream training  
+## Tech Stack
+- **Backend:** Python, FastAPI, MCP Server
+- **Frontend:** Next.js, React, TailwindCSS
+- **Infrastructure:** Docker, Docker Compose
 
-- **SAMULE Reflection-Synthesis Jobs**
-  - Offline notebooks for parsing failure traces  
-  - Reflection → synthetic-target generation pipeline  
-  - Automatic SFT example construction  
-  - Export tools for dataset creation & versioning  
-
-- **Developer Tooling**
-  - Configurable environment layout  
-  - Local development harness for agents  
-  - Unit tests for deterministic trace shapes  
-  - Style + structure guidelines for agent-consumable code  
-
----
+## Current Status
+- [x] Core LangGraph Node Architecture
+- [x] MCP Server Integration
+- [x] Basic Frontend (Next.js)
+- [ ] GraphRAG Implementation
+- [ ] Self-Improvement Loops (Reflection & TT-SI)
